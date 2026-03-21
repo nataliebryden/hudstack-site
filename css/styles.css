@@ -792,7 +792,8 @@ nav.scrolled {
   padding-block: var(--space-xl);
 }
 .footer-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-xl); margin-bottom: var(--space-xl); }
-@media (min-width: 768px) { .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; } }
+@media (min-width: 560px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 960px) { .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; } }
 .footer-logo-name { font-family: 'Space Grotesk', sans-serif; font-size: 1.3rem; font-weight: 700; color: var(--hs-white); letter-spacing: 0.12em; text-transform: uppercase; }
 .footer-logo-tag  { font-family: 'DM Sans', sans-serif; font-size: 0.8rem; color: var(--hs-gray); margin-bottom: 1rem; }
 .footer-desc { font-size: 0.875rem; color: var(--hs-gray); margin-bottom: 1.25rem; max-width: 280px; }
@@ -804,7 +805,7 @@ nav.scrolled {
 .footer-link { display: block; font-size: 0.875rem; color: var(--hs-gray); margin-bottom: 0.5rem; transition: color var(--transition); }
 .footer-link:hover { color: var(--hs-teal); }
 .footer-bottom { padding-top: var(--space-md); border-top: 1px solid rgba(46,196,182,.06); display: flex; flex-direction: column; gap: 0.75rem; }
-@media (min-width: 768px) { .footer-bottom { flex-direction: row; justify-content: space-between; align-items: flex-start; } }
+@media (min-width: 768px) { .footer-bottom { flex-direction: row; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; } }
 .footer-copy { font-size: 0.8rem; color: var(--hs-gray); }
 .footer-legal-links { display: flex; gap: 1rem; }
 .footer-legal-links a { font-size: 0.8rem; color: var(--hs-gray); transition: color var(--transition); }
