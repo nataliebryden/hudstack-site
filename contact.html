@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact HudStack — Get in Touch</title>
+  <meta name="description" content="Get in touch with HudStack. Tell us your needs and we'll get back to you within 24 hours." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <div class="nav-inner">
+        <a href="/index.html" class="nav-logo" aria-label="HudStack home">
+          <span class="nav-logo-name">HudStack</span>
+          <span class="nav-logo-tag">Security is human.</span>
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="/about.html" class="nav-link">About</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Services
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="nav-dropdown-menu" role="menu">
+              <a href="/cyberescaperoom.html" role="menuitem">Escape Rooms</a>
+              <a href="/cyberawarenesstraining.html" role="menuitem">Training &amp; Workshops</a>
+              <a href="/phishingsimulation.html" role="menuitem">Phishing Simulations</a>
+              <a href="/youth.html" role="menuitem">Youth Programs</a>
+              <a href="/community.html" role="menuitem">Community Programs</a>
+              <a href="/cybergame.html" role="menuitem">Cyber Game</a>
+            </div>
+          </li>
+          <li><a href="/workwithus.html" class="nav-link">Work With Us</a></li>
+          <li><a href="/contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="https://app.hudstack.com" class="nav-client-login">Client Login</a>
+          <a href="/contact.html" class="btn-primary btn-sm">Get in Touch</a>
+        </div>
+        <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <div class="nav-mobile" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+      <span class="nav-mobile-section-label">Menu</span>
+      <a href="/about.html" class="nav-mobile-link">About</a>
+      <span class="nav-mobile-section-label">Services</span>
+      <a href="/cyberescaperoom.html" class="nav-mobile-sub">Escape Rooms</a>
+      <a href="/cyberawarenesstraining.html" class="nav-mobile-sub">Training &amp; Workshops</a>
+      <a href="/phishingsimulation.html" class="nav-mobile-sub">Phishing Simulations</a>
+      <a href="/youth.html" class="nav-mobile-sub">Youth Programs</a>
+      <a href="/community.html" class="nav-mobile-sub">Community Programs</a>
+      <a href="/cybergame.html" class="nav-mobile-sub">Cyber Game</a>
+      <a href="/workwithus.html" class="nav-mobile-link">Work With Us</a>
+      <a href="/contact.html" class="nav-mobile-link">Contact</a>
+      <div class="nav-mobile-actions">
+        <a href="https://app.hudstack.com" class="btn-secondary">Client Login</a>
+        <a href="/contact.html" class="btn-primary">Get in Touch</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero-inner-page section-dark" aria-label="Contact hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container">
+        <span class="section-label fade-in">Let's talk</span>
+        <h1 class="fade-in" style="transition-delay:80ms">Get in Touch</h1>
+        <div class="accent-line fade-in" style="transition-delay:120ms" aria-hidden="true"></div>
+        <p class="hero-sub fade-in" style="transition-delay:160ms">
+          Tell us your needs and we'll get back to you within 24 hours.
+        </p>
+      </div>
+    </section>
+
+    <!-- FORM + INFO -->
+    <section class="section section-slate" aria-labelledby="contact-heading">
+      <div class="container">
+        <h2 id="contact-heading" class="sr-only">Contact form</h2>
+        <div class="two-col">
+
+          <!-- Form -->
+          <div class="fade-in">
+            <div class="card-glass">
+              <form id="contact-form" novalidate aria-label="Contact form">
+                <!-- Web3Forms access key — replace with your own from web3forms.com -->
+                <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
+                <input type="hidden" name="subject" value="New enquiry from HudStack website" />
+                <input type="hidden" name="from_name" value="HudStack Website" />
+
+                <div class="form-group">
+                  <label class="form-label" for="name">Name <span aria-hidden="true">*</span></label>
+                  <input class="form-input" type="text" id="name" name="name" required autocomplete="name" placeholder="Your full name" />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="email">Email address <span aria-hidden="true">*</span></label>
+                  <input class="form-input" type="email" id="email" name="email" required autocomplete="email" placeholder="you@organisation.com" />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="organisation">Organisation <span class="optional">(optional)</span></label>
+                  <input class="form-input" type="text" id="organisation" name="organisation" autocomplete="organization" placeholder="Your organisation or school" />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="interest">I'm interested in...</label>
+                  <select class="form-select" id="interest" name="interest">
+                    <option value="">Select a service</option>
+                    <option value="Cybersecurity Training">Cybersecurity Training</option>
+                    <option value="Phishing Simulations">Phishing Simulations</option>
+                    <option value="Escape Rooms">Escape Rooms</option>
+                    <option value="Youth Programs">Youth Programs</option>
+                    <option value="Community Programs">Community Programs</option>
+                    <option value="Cyber Game">Cyber Game</option>
+                    <option value="Consulting">Consulting</option>
+                    <option value="Speaking">Speaking</option>
+                    <option value="Incident Support">Incident Support</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="message">Message <span aria-hidden="true">*</span></label>
+                  <textarea class="form-textarea" id="message" name="message" required placeholder="Tell us about your team, what you're looking for, and any relevant details..."></textarea>
+                </div>
+
+                <!-- Honeypot anti-spam -->
+                <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" aria-hidden="true" />
+
+                <button type="submit" class="btn-primary" style="width:100%">Send Message</button>
+              </form>
+
+              <div id="form-success" class="form-message" role="alert" style="display:none">
+                Thanks! We'll be in touch within 24 hours.
+              </div>
+              <div id="form-error" class="form-message" role="alert" style="display:none">
+                Something went wrong. Please try again or email us directly at <a href="mailto:info@hudstack.com" style="color:inherit;text-decoration:underline">info@hudstack.com</a>.
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact info -->
+          <div class="fade-in" style="transition-delay:120ms">
+            <h2 style="margin-bottom:2rem;font-size:1.5rem">Contact Information</h2>
+
+            <div class="contact-info-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+              </svg>
+              <div>
+                <div style="font-size:.85rem;color:var(--hudstack-gray);margin-bottom:.25rem">Email</div>
+                <a href="mailto:info@hudstack.com">info@hudstack.com</a>
+              </div>
+            </div>
+
+            <div style="margin-top:2rem;padding:1.5rem;background:rgba(46,196,182,.05);border:1px solid rgba(46,196,182,.1);border-radius:1rem">
+              <p style="color:var(--hudstack-white);font-weight:600;margin-bottom:.5rem">Prefer to chat?</p>
+              <p style="margin:0;font-size:.95rem">Send us an email and we'll arrange a call at a time that suits you.</p>
+            </div>
+
+            <div style="margin-top:2rem">
+              <h3 style="font-size:1rem;margin-bottom:1rem;color:var(--hudstack-white)">Our Programs</h3>
+              <div style="display:flex;flex-direction:column;gap:.5rem">
+                <a href="/cyberawarenesstraining.html" class="card-link" style="margin-top:0">Cybersecurity Awareness Training</a>
+                <a href="/phishingsimulation.html" class="card-link" style="margin-top:0">Phishing Simulations</a>
+                <a href="/cyberescaperoom.html" class="card-link" style="margin-top:0">Escape Rooms</a>
+                <a href="/youth.html" class="card-link" style="margin-top:0">Youth Programs</a>
+                <a href="/community.html" class="card-link" style="margin-top:0">Community Programs</a>
+                <a href="/cybergame.html" class="card-link" style="margin-top:0">Cyber Game</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo-name">HudStack</div>
+          <div class="footer-logo-tag">Security is human.</div>
+          <p class="footer-desc">Engaging cybersecurity education and training for businesses, schools, and communities across Australia.</p>
+          <div class="footer-social" aria-label="Social media links">
+            <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="#" aria-label="Twitter / X"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16M4 20 20 4"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer-col-title">Programs</h3>
+          <a href="/cyberawarenesstraining.html" class="footer-link">Training &amp; Workshops</a>
+          <a href="/phishingsimulation.html" class="footer-link">Phishing Simulations</a>
+          <a href="/cyberescaperoom.html" class="footer-link">Escape Rooms</a>
+          <a href="/youth.html" class="footer-link">Youth Programs</a>
+          <a href="/community.html" class="footer-link">Community Programs</a>
+          <a href="/cybergame.html" class="footer-link">Cyber Game</a>
+        </div>
+        <div>
+          <h3 class="footer-col-title">Company</h3>
+          <a href="/about.html" class="footer-link">About</a>
+          <a href="/workwithus.html" class="footer-link">Work With Us</a>
+          <a href="/contact.html" class="footer-link">Contact</a>
+          <a href="https://app.hudstack.com" class="footer-link">Client Login</a>
+        </div>
+        <div>
+          <h3 class="footer-col-title">Contact</h3>
+          <a href="mailto:info@hudstack.com" class="footer-link teal-link">info@hudstack.com</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>
+          <p class="footer-copy">&copy; 2026 HudStack. All rights reserved.</p>
+          <p class="footer-disclaimer">HudStack provides cybersecurity education and training services. We do not provide security assessments, audits, or assurance services.</p>
+        </div>
+        <div class="footer-legal-links">
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

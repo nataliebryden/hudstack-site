@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The HudStack Cyber Game — Learn Cybersecurity by Playing</title>
+  <meta name="description" content="An interactive cybersecurity strategy game and card deck that teaches real security concepts through gameplay. For teams, families, and classrooms." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <div class="nav-inner">
+        <a href="/index.html" class="nav-logo" aria-label="HudStack home">
+          <span class="nav-logo-name">HudStack</span>
+          <span class="nav-logo-tag">Security is human.</span>
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="/about.html" class="nav-link">About</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Services
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="nav-dropdown-menu" role="menu">
+              <a href="/cyberescaperoom.html" role="menuitem">Escape Rooms</a>
+              <a href="/cyberawarenesstraining.html" role="menuitem">Training &amp; Workshops</a>
+              <a href="/phishingsimulation.html" role="menuitem">Phishing Simulations</a>
+              <a href="/youth.html" role="menuitem">Youth Programs</a>
+              <a href="/community.html" role="menuitem">Community Programs</a>
+              <a href="/cybergame.html" role="menuitem">Cyber Game</a>
+            </div>
+          </li>
+          <li><a href="/workwithus.html" class="nav-link">Work With Us</a></li>
+          <li><a href="/contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="https://app.hudstack.com" class="nav-client-login">Client Login</a>
+          <a href="/contact.html" class="btn-primary btn-sm">Get in Touch</a>
+        </div>
+        <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <div class="nav-mobile" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+      <span class="nav-mobile-section-label">Menu</span>
+      <a href="/about.html" class="nav-mobile-link">About</a>
+      <span class="nav-mobile-section-label">Services</span>
+      <a href="/cyberescaperoom.html" class="nav-mobile-sub">Escape Rooms</a>
+      <a href="/cyberawarenesstraining.html" class="nav-mobile-sub">Training &amp; Workshops</a>
+      <a href="/phishingsimulation.html" class="nav-mobile-sub">Phishing Simulations</a>
+      <a href="/youth.html" class="nav-mobile-sub">Youth Programs</a>
+      <a href="/community.html" class="nav-mobile-sub">Community Programs</a>
+      <a href="/cybergame.html" class="nav-mobile-sub">Cyber Game</a>
+      <a href="/workwithus.html" class="nav-mobile-link">Work With Us</a>
+      <a href="/contact.html" class="nav-mobile-link">Contact</a>
+      <div class="nav-mobile-actions">
+        <a href="https://app.hudstack.com" class="btn-secondary">Client Login</a>
+        <a href="/contact.html" class="btn-primary">Get in Touch</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero-inner-page section-dark" aria-label="Cyber Game hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container">
+        <span class="section-label fade-in">Interactive learning</span>
+        <h1 class="fade-in" style="transition-delay:80ms">The HudStack Cyber Game</h1>
+        <div class="accent-line fade-in" style="transition-delay:120ms" aria-hidden="true"></div>
+        <p class="hero-sub fade-in" style="transition-delay:160ms">Learn cybersecurity by playing.</p>
+      </div>
+    </section>
+
+    <!-- WHAT IT IS -->
+    <section class="section section-slate" aria-labelledby="what-heading">
+      <div class="container">
+        <div style="max-width:780px" class="fade-in">
+          <span class="section-label">What it is</span>
+          <h2 id="what-heading">Strategy meets security awareness</h2>
+          <div class="accent-line" aria-hidden="true"></div>
+          <p>
+            An interactive cybersecurity strategy game and card deck that teaches real security concepts through gameplay. Perfect for those who love strategy games. Educational and genuinely fun.
+          </p>
+          <p>
+            Players face realistic cyber scenarios including phishing attempts, social engineering, data breaches, and password challenges. Make decisions, face consequences, and learn from mistakes in a safe, engaging environment.
+          </p>
+          <p style="font-style:italic;color:var(--hudstack-teal)">
+            "No technical knowledge required. Just sharp thinking and healthy suspicion."
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section section-dark" aria-labelledby="how-heading">
+      <div class="container">
+        <div class="text-center fade-in">
+          <span class="section-label">Gameplay</span>
+          <h2 id="how-heading">How It Works</h2>
+          <div class="accent-line centered" aria-hidden="true"></div>
+        </div>
+        <div class="grid grid-3 stagger" style="margin-top:3rem">
+          <div class="card-glass">
+            <div class="card-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="2" ry="2"/>
+                <path d="M16 2v4M8 2v4M2 10h20M8 16h.01M12 16h.01M16 16h.01M8 20h.01M12 20h.01M16 20h.01"/>
+              </svg>
+            </div>
+            <h3 class="card-title">Face real scenarios</h3>
+            <p class="card-desc">Players encounter realistic cyber situations drawn from the threats organisations and individuals face every day.</p>
+          </div>
+          <div class="card-glass">
+            <div class="card-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 8 12 12 14 14"/>
+              </svg>
+            </div>
+            <h3 class="card-title">Make decisions</h3>
+            <p class="card-desc">Choose how to respond. Every decision has consequences, just like in the real world.</p>
+          </div>
+          <div class="card-glass">
+            <div class="card-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                <polyline points="17 6 23 6 23 12"/>
+              </svg>
+            </div>
+            <h3 class="card-title">Learn and improve</h3>
+            <p class="card-desc">The debrief after each round reinforces the lessons and builds lasting awareness.</p>
+          </div>
+        </div>
+        <p class="fade-in" style="margin-top:2rem;text-align:center;max-width:640px;margin-inline:auto">
+          Designed for teams, families, classrooms, and corporate training sessions.
+        </p>
+      </div>
+    </section>
+
+    <!-- AVAILABLE FORMATS -->
+    <section class="section section-light" aria-labelledby="formats-heading">
+      <div class="container">
+        <div class="text-center fade-in">
+          <span class="section-label" style="color:var(--hudstack-teal)">Formats</span>
+          <h2 id="formats-heading" style="color:var(--hudstack-dark-text)">Available Formats</h2>
+          <div class="accent-line centered" aria-hidden="true"></div>
+        </div>
+        <div class="grid grid-2 stagger" style="margin-top:3rem;max-width:720px;margin-inline:auto">
+          <div class="card-light">
+            <div class="card-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="2" ry="2"/>
+                <path d="M16 2v4M8 2v4M2 10h20M8 16h.01M12 16h.01M16 16h.01M8 20h.01M12 20h.01M16 20h.01"/>
+              </svg>
+            </div>
+            <h3 style="color:var(--hudstack-dark-text);font-size:1.1rem;margin-bottom:.5rem">Strategy Game</h3>
+            <p style="color:var(--hudstack-dark-text);opacity:.75;margin:0">A full group experience for 3-6 players. Corporate training, classroom use, or game night.</p>
+          </div>
+          <div class="card-light">
+            <div class="card-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+              </svg>
+            </div>
+            <h3 style="color:var(--hudstack-dark-text);font-size:1.1rem;margin-bottom:.5rem">Card Deck</h3>
+            <p style="color:var(--hudstack-dark-text);opacity:.75;margin:0">A portable, fast-paced card game for quick cybersecurity challenges. Great for icebreakers, workshops, and events.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" aria-labelledby="cta-heading">
+      <div class="container">
+        <span class="section-label">Get in touch</span>
+        <h2 id="cta-heading">Interested in the HudStack Cyber Game?</h2>
+        <p>Get in touch to learn more or register your interest. We'll get back to you with all the details.</p>
+        <a href="/contact.html" class="btn-primary">Register Your Interest</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo-name">HudStack</div>
+          <div class="footer-logo-tag">Security is human.</div>
+          <p class="footer-desc">Engaging cybersecurity education and training for businesses, schools, and communities across Australia.</p>
+          <div class="footer-social" aria-label="Social media links">
+            <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="#" aria-label="Twitter / X"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16M4 20 20 4"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer-col-title">Programs</h3>
+          <a href="/cyberawarenesstraining.html" class="footer-link">Training &amp; Workshops</a>
+          <a href="/phishingsimulation.html" class="footer-link">Phishing Simulations</a>
+          <a href="/cyberescaperoom.html" class="footer-link">Escape Rooms</a>
+          <a href="/youth.html" class="footer-link">Youth Programs</a>
+          <a href="/community.html" class="footer-link">Community Programs</a>
+          <a href="/cybergame.html" class="footer-link">Cyber Game</a>
+        </div>
+        <div>
+          <h3 class="footer-col-title">Company</h3>
+          <a href="/about.html" class="footer-link">About</a>
+          <a href="/workwithus.html" class="footer-link">Work With Us</a>
+          <a href="/contact.html" class="footer-link">Contact</a>
+          <a href="https://app.hudstack.com" class="footer-link">Client Login</a>
+        </div>
+        <div>
+          <h3 class="footer-col-title">Contact</h3>
+          <a href="mailto:info@hudstack.com" class="footer-link teal-link">info@hudstack.com</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>
+          <p class="footer-copy">&copy; 2026 HudStack. All rights reserved.</p>
+          <p class="footer-disclaimer">HudStack provides cybersecurity education and training services. We do not provide security assessments, audits, or assurance services.</p>
+        </div>
+        <div class="footer-legal-links">
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
