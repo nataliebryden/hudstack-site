@@ -6,7 +6,7 @@
 /* ------------------------------------------------------------
    1. FONTS
    ------------------------------------------------------------ */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap');
 
 /* ------------------------------------------------------------
    2. CSS CUSTOM PROPERTIES (Design Tokens)
@@ -18,6 +18,7 @@
   --hudstack-slate: #1E293B;
   --hudstack-teal: #2EC4B6;
   --hudstack-coral: #FF6B6B;
+  --hudstack-pink: #FF3CAC;
   --hudstack-white: #F0F4F8;
   --hudstack-light-bg: #F7F9FC;
   --hudstack-gold: #F4C542;
@@ -63,7 +64,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
@@ -100,10 +101,18 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
 
-h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
-h2 { font-size: clamp(1.5rem, 3.5vw, 2.5rem); }
+h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.6rem, 4vw, 2.75rem); letter-spacing: -0.015em; }
 h3 { font-size: clamp(1.15rem, 2.5vw, 1.5rem); }
 h4 { font-size: 1.1rem; }
+
+/* Gradient text — used on hero headlines */
+.gradient-text {
+  background: linear-gradient(135deg, var(--hudstack-teal) 0%, var(--hudstack-pink) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 
 p { margin-bottom: 1rem; }
 p:last-child { margin-bottom: 0; }
@@ -342,7 +351,7 @@ p:last-child { margin-bottom: 0; }
 .accent-line {
   width: 80px;
   height: 3px;
-  background: linear-gradient(135deg, var(--hudstack-teal), var(--hudstack-coral));
+  background: linear-gradient(135deg, var(--hudstack-teal), var(--hudstack-pink));
   border-radius: 999px;
   margin-block: 1.25rem;
 }
@@ -352,7 +361,7 @@ p:last-child { margin-bottom: 0; }
 /* --- Decorative top line on sections --- */
 .section-accent-top {
   border-top: 3px solid transparent;
-  border-image: linear-gradient(135deg, var(--hudstack-teal), var(--hudstack-coral)) 1;
+  border-image: linear-gradient(135deg, var(--hudstack-teal), var(--hudstack-pink)) 1;
 }
 
 /* --- Step number --- */
@@ -464,10 +473,11 @@ p:last-child { margin-bottom: 0; }
 }
 
 .nav-logo-name {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--hudstack-white);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .nav-logo-tag {
@@ -672,16 +682,40 @@ p:last-child { margin-bottom: 0; }
    9. HERO SECTIONS
    ------------------------------------------------------------ */
 .hero {
-  min-height: 80vh;
+  min-height: 88vh;
   display: flex;
   align-items: center;
   padding-block: var(--space-2xl);
   position: relative;
   overflow: hidden;
   background-color: var(--hudstack-dark);
+  text-align: center;
 }
 
-.hero-inner { padding-top: 2rem; }
+.hero-inner {
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.hero .section-label { display: block; }
+
+.hero .hero-sub {
+  margin-inline: auto;
+}
+
+.hero .btn-group {
+  justify-content: center;
+}
+
+.hero .accent-line {
+  margin-inline: auto;
+}
+
+/* Huntress-style narrow hero text column */
+.hero-content {
+  max-width: 760px;
+  margin-inline: auto;
+}
 
 .hero-glow {
   position: absolute;
@@ -702,8 +736,8 @@ p:last-child { margin-bottom: 0; }
   max-width: 800px;
   max-height: 800px;
   background: radial-gradient(ellipse at center,
-    rgba(46, 196, 182, 0.12) 0%,
-    rgba(255, 107, 107, 0.04) 50%,
+    rgba(46, 196, 182, 0.15) 0%,
+    rgba(255, 60, 172, 0.06) 50%,
     transparent 70%);
   border-radius: 50%;
 }
@@ -730,6 +764,23 @@ p:last-child { margin-bottom: 0; }
   background-color: var(--hudstack-dark);
   position: relative;
   overflow: hidden;
+  text-align: center;
+}
+
+.hero-inner-page .container { width: 100%; }
+
+.hero-inner-page .section-label { display: block; }
+
+.hero-inner-page .hero-sub {
+  margin-inline: auto;
+}
+
+.hero-inner-page .btn-group {
+  justify-content: center;
+}
+
+.hero-inner-page .accent-line {
+  margin-inline: auto;
 }
 
 .hero-inner-page .hero-glow { opacity: 0.6; }
@@ -758,7 +809,8 @@ p:last-child { margin-bottom: 0; }
   font-size: 1.3rem;
   font-weight: 700;
   color: var(--hudstack-white);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .footer-logo-tag {
@@ -864,7 +916,7 @@ p:last-child { margin-bottom: 0; }
 .cta-section {
   background: var(--hudstack-navy);
   border-top: 3px solid transparent;
-  border-image: linear-gradient(135deg, var(--hudstack-teal), var(--hudstack-coral)) 1;
+  border-image: linear-gradient(135deg, var(--hudstack-teal), var(--hudstack-pink)) 1;
   text-align: center;
   padding-block: var(--space-2xl);
 }
