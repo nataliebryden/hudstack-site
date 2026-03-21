@@ -37,9 +37,8 @@
 
 /* 3. RESET */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; overflow-x: hidden; }
-body { overflow-x: hidden; }
-img, svg, video { max-width: 100%; height: auto; }
+html, body { overflow-x: hidden; width: 100%; }
+html { scroll-behavior: smooth; }
 body {
   font-family: 'DM Sans', sans-serif;
   font-weight: 500;
@@ -52,7 +51,8 @@ body {
 }
 main, footer { position: relative; z-index: 2; }
 nav { z-index: 100; }
-img, svg { display: block; max-width: 100%; }
+img, video { display: block; max-width: 100%; height: auto; }
+svg { display: block; }
 a { color: inherit; text-decoration: none; }
 ul, ol { list-style: none; }
 button { font-family: inherit; }
@@ -581,7 +581,7 @@ nav.scrolled {
   text-decoration: none;
   flex-shrink: 0;
 }
-.nav-logo-icon { width: 36px; height: 36px; max-width: 36px; max-height: 36px; flex-shrink: 0; }
+.nav-logo-icon { width: 36px !important; height: 36px !important; max-width: 36px !important; max-height: 36px !important; flex-shrink: 0; display: block; }
 .nav-logo-text {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
@@ -693,17 +693,21 @@ nav.scrolled {
 @media (max-width: 768px) {
   /* Nav */
   nav {
-    top: 12px;
-    left: 0.75rem;
-    right: 0.75rem;
-    width: auto;
-    transform: none;
-    padding: 0.5rem 1rem;
-    border-radius: 50px;
+    top: 12px !important;
+    left: 0.75rem !important;
+    right: 0.75rem !important;
+    width: auto !important;
+    transform: none !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 50px !important;
   }
-  .nav-links, .nav-right { display: none; }
-  .hamburger { display: flex; }
-  .nav-logo-text { font-size: 0.9rem; }
+  .nav-links { display: none !important; }
+  .nav-right { display: none !important; }
+  .hamburger { display: flex !important; }
+  .nav-logo-text { font-size: 0.85rem; }
+
+  /* Cards/grids stack to single column */
+  .grid, .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr !important; gap: 1rem; }
 
   /* Hero */
   .hero { padding-top: 6rem; min-height: 80vh; }
