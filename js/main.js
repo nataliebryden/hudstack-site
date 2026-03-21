@@ -14,19 +14,24 @@
   }, { passive: true });
 
   /* ----------------------------------------------------------
-     5. TYPEWRITER: set animation duration/steps per character count
+     5. TYPEWRITER: force width:0, then trigger via .typing class
      ---------------------------------------------------------- */
-  document.querySelectorAll('.typewriter-wrapper').forEach(el => {
-    const chars = el.textContent.length;
+  const wrapper = document.querySelector('.typewriter-wrapper');
+  if (wrapper) {
+    const chars = wrapper.textContent.trim().length;
     const duration = chars < 20 ? 2 : chars < 35 ? 2.5 : 3;
-    el.style.animation = `type-reveal ${duration}s steps(${chars}, end) 0.5s forwards`;
-  });
-
-  // Hide all cursors after the longest headline finishes
-  setTimeout(() => {
-    document.querySelectorAll('.typewriter-cursor').forEach(cursor => {
-      cursor.style.display = 'none';
+    wrapper.style.setProperty('--type-steps', chars);
+    wrapper.style.setProperty('--type-duration', duration + 's');
+    wrapper.style.width = '0';
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        wrapper.classList.add('typing');
+      });
     });
+  }
+
+  setTimeout(() => {
+    document.querySelectorAll('.typewriter-cursor').forEach(c => { c.style.display = 'none'; });
   }, 4500);
 
   /* ----------------------------------------------------------
