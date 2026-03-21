@@ -73,29 +73,7 @@
     });
   });
 
-  /* ----------------------------------------------------------
-     4. HUD RETICLE: inject into every hero section
-     ---------------------------------------------------------- */
-  const hudSVG = `<div class="hud-element" aria-hidden="true">
-    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="100" cy="100" r="80" fill="none" stroke="currentColor" stroke-width="0.5" stroke-dasharray="4 8"/>
-      <circle cx="100" cy="100" r="50" fill="none" stroke="currentColor" stroke-width="0.75"/>
-      <line x1="100" y1="20" x2="100" y2="40" stroke="currentColor" stroke-width="1.5"/>
-      <line x1="100" y1="160" x2="100" y2="180" stroke="currentColor" stroke-width="1.5"/>
-      <line x1="20" y1="100" x2="40" y2="100" stroke="currentColor" stroke-width="1.5"/>
-      <line x1="160" y1="100" x2="180" y2="100" stroke="currentColor" stroke-width="1.5"/>
-      <circle cx="100" cy="100" r="4" fill="currentColor"/>
-      <circle cx="100" cy="100" r="12" fill="none" stroke="currentColor" stroke-width="0.75"/>
-      <line x1="60" y1="60" x2="70" y2="70" stroke="currentColor" stroke-width="0.5"/>
-      <line x1="140" y1="60" x2="130" y2="70" stroke="currentColor" stroke-width="0.5"/>
-      <line x1="60" y1="140" x2="70" y2="130" stroke="currentColor" stroke-width="0.5"/>
-      <line x1="140" y1="140" x2="130" y2="130" stroke="currentColor" stroke-width="0.5"/>
-    </svg>
-  </div>`;
-
-  document.querySelectorAll('.hero, .hero-inner-page').forEach(hero => {
-    hero.insertAdjacentHTML('beforeend', hudSVG);
-  });
+  /* HUD reticle removed — no longer injected */
 
   /* ----------------------------------------------------------
      5. GLITCH TEXT: apply to inner-page hero h1s
