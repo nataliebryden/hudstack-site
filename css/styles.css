@@ -48,7 +48,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-main, footer { position: relative; z-index: 1; }
+main, footer { position: relative; z-index: 2; }
+nav { z-index: 100; }
 img, svg { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 ul, ol { list-style: none; }
@@ -117,9 +118,9 @@ p:last-child { margin-bottom: 0; }
 .section { padding-block: var(--space-2xl); }
 section { padding: 7rem 2rem; }
 @media (max-width: 768px) { section { padding: 4rem 1.5rem; } }
-.section-dark  { background-color: var(--hs-dark);  }
-.section-slate { background-color: var(--hs-slate); }
-.section-navy  { background-color: var(--hs-navy);  }
+.section-dark  { background-color: rgba(11, 17, 32, 0.75);  }
+.section-slate { background-color: rgba(30, 41, 59, 0.70); }
+.section-navy  { background-color: rgba(27, 42, 74, 0.70);  }
 
 /* Kill light sections — entire site is dark */
 .section-light { background-color: var(--hs-navy) !important; }
@@ -873,7 +874,7 @@ body::before {
   background: radial-gradient(circle, rgba(46,196,182,0.07) 0%, transparent 70%);
   filter: blur(80px);
   pointer-events: none;
-  z-index: 0;
+  z-index: 1;
   animation: blob-drift-1 30s ease-in-out infinite alternate;
 }
 .gradient-blob-2 {
@@ -885,7 +886,7 @@ body::before {
   background: radial-gradient(circle, rgba(255,60,172,0.05) 0%, transparent 70%);
   filter: blur(80px);
   pointer-events: none;
-  z-index: 0;
+  z-index: 1;
   animation: blob-drift-2 25s ease-in-out infinite alternate;
 }
 @keyframes blob-drift-1 {
@@ -924,7 +925,7 @@ body::before {
   top: 0; left: 0;
   width: 100%; height: 100%;
   pointer-events: none;
-  z-index: 0;
+  z-index: 1;
   overflow: hidden;
 }
 .particle { position: absolute; display: block; opacity: 0.15; }
