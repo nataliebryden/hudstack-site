@@ -9,16 +9,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>
 <body>
 
   <!-- NAV -->
+  <div class="status-bar" aria-hidden="true">
+    <span class="status-left">SYSTEM STATUS: OPTIMAL</span>
+    <span class="status-right">UPTIME: 99.9%</span>
+  </div>
   <header>
     <nav class="nav" role="navigation" aria-label="Main navigation">
       <div class="nav-inner">
         <a href="/index.html" class="nav-logo" aria-label="HudStack home">
-          <span class="nav-logo-name">HudStack</span>
-          <span class="nav-logo-tag">Security is human.</span>
+          <img src="/img/hudstack-logo.svg" alt="" class="nav-logo-icon" aria-hidden="true">
+          <span class="nav-logo-text">HUDSTACK</span>
         </a>
         <ul class="nav-links" role="list">
           <li><a href="/about.html" class="nav-link">About</a></li>
@@ -97,33 +102,33 @@
             <p>
               Available in person or online, our escape rooms are designed so that no technical knowledge is required. Just sharp thinking, good teamwork, and a healthy dose of suspicion.
             </p>
-            <p style="font-style:italic;color:var(--hudstack-teal)">"It's the most fun your team will ever have learning about cybersecurity."</p>
+            <p style="font-style:italic;color:var(--hs-teal)">"It's the most fun your team will ever have learning about cybersecurity."</p>
           </div>
           <div class="fade-in" style="transition-delay:120ms">
             <div class="card-glass" style="height:100%;display:flex;flex-direction:column;justify-content:center;gap:1.5rem">
               <div style="display:flex;align-items:center;gap:1rem">
                 <div style="width:3rem;height:3rem;background:rgba(46,196,182,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--hudstack-teal)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--hs-teal)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                 </div>
-                <div><strong style="color:var(--hudstack-white);display:block">Tailored duration</strong><span style="font-size:.9rem">Adapted to your group and goals</span></div>
+                <div><strong style="color:var(--hs-white);display:block">Tailored duration</strong><span style="font-size:.9rem">Adapted to your group and goals</span></div>
               </div>
               <div style="display:flex;align-items:center;gap:1rem">
                 <div style="width:3rem;height:3rem;background:rgba(46,196,182,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--hudstack-teal)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="22" height="22" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--hs-teal)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="22" height="22" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                 </div>
-                <div><strong style="color:var(--hudstack-white);display:block">5-15 per team</strong><span style="font-size:.9rem">Multiple teams can run simultaneously</span></div>
+                <div><strong style="color:var(--hs-white);display:block">5-15 per team</strong><span style="font-size:.9rem">Multiple teams can run simultaneously</span></div>
               </div>
               <div style="display:flex;align-items:center;gap:1rem">
                 <div style="width:3rem;height:3rem;background:rgba(46,196,182,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--hudstack-teal)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="22" height="22" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--hs-teal)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="22" height="22" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 </div>
-                <div><strong style="color:var(--hudstack-white);display:block">We come to you</strong><span style="font-size:.9rem">Or available as an online experience</span></div>
+                <div><strong style="color:var(--hs-white);display:block">We come to you</strong><span style="font-size:.9rem">Or available as an online experience</span></div>
               </div>
               <div style="display:flex;align-items:center;gap:1rem">
                 <div style="width:3rem;height:3rem;background:rgba(46,196,182,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--hudstack-teal)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="22" height="22" aria-hidden="true"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--hs-teal)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="22" height="22" aria-hidden="true"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
                 </div>
-                <div><strong style="color:var(--hudstack-white);display:block">All materials provided</strong><span style="font-size:.9rem">No technical knowledge required</span></div>
+                <div><strong style="color:var(--hs-white);display:block">All materials provided</strong><span style="font-size:.9rem">No technical knowledge required</span></div>
               </div>
             </div>
           </div>
@@ -176,8 +181,8 @@
     <section class="section section-light" aria-labelledby="for-heading">
       <div class="container">
         <div class="text-center fade-in">
-          <span class="section-label" style="color:var(--hudstack-teal)">Who it's for</span>
-          <h2 id="for-heading" style="color:var(--hudstack-dark-text)">Available For</h2>
+          <span class="section-label" style="color:var(--hs-teal)">Who it's for</span>
+          <h2 id="for-heading" style="color:var(--hs-dark-text)">Available For</h2>
           <div class="accent-line centered" aria-hidden="true"></div>
         </div>
         <div class="grid grid-4 stagger" style="margin-top:3rem">
@@ -187,8 +192,8 @@
                 <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
               </svg>
             </div>
-            <h3 style="color:var(--hudstack-dark-text);margin-bottom:.5rem;font-size:1.05rem">Corporate Team-Building</h3>
-            <p style="color:var(--hudstack-dark-text);opacity:.75;font-size:.9rem;margin:0">Perfect for staff development days, offsites, and team bonding. Groups of 5-15 per session.</p>
+            <h3 style="color:var(--hs-dark-text);margin-bottom:.5rem;font-size:1.05rem">Corporate Team-Building</h3>
+            <p style="color:var(--hs-dark-text);opacity:.75;font-size:.9rem;margin:0">Perfect for staff development days, offsites, and team bonding. Groups of 5-15 per session.</p>
           </div>
           <div class="card-light">
             <div class="card-icon" aria-hidden="true">
@@ -196,8 +201,8 @@
                 <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
               </svg>
             </div>
-            <h3 style="color:var(--hudstack-dark-text);margin-bottom:.5rem;font-size:1.05rem">School Incursions</h3>
-            <p style="color:var(--hudstack-dark-text);opacity:.75;font-size:.9rem;margin:0">Cybersecurity meets the classroom. Engaging, curriculum-aligned experiences for primary and secondary students.</p>
+            <h3 style="color:var(--hs-dark-text);margin-bottom:.5rem;font-size:1.05rem">School Incursions</h3>
+            <p style="color:var(--hs-dark-text);opacity:.75;font-size:.9rem;margin:0">Cybersecurity meets the classroom. Engaging, curriculum-aligned experiences for primary and secondary students.</p>
           </div>
           <div class="card-light">
             <div class="card-icon" aria-hidden="true">
@@ -205,8 +210,8 @@
                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
               </svg>
             </div>
-            <h3 style="color:var(--hudstack-dark-text);margin-bottom:.5rem;font-size:1.05rem">Birthday Parties &amp; Private Events</h3>
-            <p style="color:var(--hudstack-dark-text);opacity:.75;font-size:.9rem;margin:0">A unique, memorable party experience for teens and young adults.</p>
+            <h3 style="color:var(--hs-dark-text);margin-bottom:.5rem;font-size:1.05rem">Birthday Parties &amp; Private Events</h3>
+            <p style="color:var(--hs-dark-text);opacity:.75;font-size:.9rem;margin:0">A unique, memorable party experience for teens and young adults.</p>
           </div>
           <div class="card-light">
             <div class="card-icon" aria-hidden="true">
@@ -214,8 +219,8 @@
                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
               </svg>
             </div>
-            <h3 style="color:var(--hudstack-dark-text);margin-bottom:.5rem;font-size:1.05rem">Community Groups</h3>
-            <p style="color:var(--hudstack-dark-text);opacity:.75;font-size:.9rem;margin:0">Libraries, youth groups, scouts, church groups, and anyone who wants to learn while having fun.</p>
+            <h3 style="color:var(--hs-dark-text);margin-bottom:.5rem;font-size:1.05rem">Community Groups</h3>
+            <p style="color:var(--hs-dark-text);opacity:.75;font-size:.9rem;margin:0">Libraries, youth groups, scouts, church groups, and anyone who wants to learn while having fun.</p>
           </div>
         </div>
       </div>
@@ -277,6 +282,10 @@
           <a href="/privacy.html">Privacy Policy</a>
           <a href="/terms.html">Terms of Use</a>
         </div>
+      <div class="data-flow" aria-hidden="true">
+        <span class="data-label">DATA FLOW:</span>
+        <div class="data-line"><div class="data-pulse"></div></div>
+      </div>
       </div>
     </div>
   </footer>

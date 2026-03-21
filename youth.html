@@ -9,16 +9,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>
 <body>
 
   <!-- NAV -->
+  <div class="status-bar" aria-hidden="true">
+    <span class="status-left">SYSTEM STATUS: OPTIMAL</span>
+    <span class="status-right">UPTIME: 99.9%</span>
+  </div>
   <header>
     <nav class="nav" role="navigation" aria-label="Main navigation">
       <div class="nav-inner">
         <a href="/index.html" class="nav-logo" aria-label="HudStack home">
-          <span class="nav-logo-name">HudStack</span>
-          <span class="nav-logo-tag">Security is human.</span>
+          <img src="/img/hudstack-logo.svg" alt="" class="nav-logo-icon" aria-hidden="true">
+          <span class="nav-logo-text">HUDSTACK</span>
         </a>
         <ul class="nav-links" role="list">
           <li><a href="/about.html" class="nav-link">About</a></li>
@@ -119,7 +124,7 @@
               <li class="icon-list-item card-desc"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Password basics</li>
               <li class="icon-list-item card-desc"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>What to do if something feels wrong</li>
             </ul>
-            <p style="font-style:italic;color:var(--hudstack-teal);font-size:.9rem;margin:0">"Fun, interactive sessions with activities and games"</p>
+            <p style="font-style:italic;color:var(--hs-teal);font-size:.9rem;margin:0">"Fun, interactive sessions with activities and games"</p>
           </div>
 
           <div class="card-glass">
@@ -133,7 +138,7 @@
               <li class="icon-list-item card-desc"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Understanding AI risks, including deepfakes</li>
               <li class="icon-list-item card-desc"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Using AI tools safely</li>
             </ul>
-            <p style="font-style:italic;color:var(--hudstack-teal);font-size:.9rem;margin:0">"Real-world scenarios and group discussions"</p>
+            <p style="font-style:italic;color:var(--hs-teal);font-size:.9rem;margin:0">"Real-world scenarios and group discussions"</p>
           </div>
 
           <div class="card-glass">
@@ -144,7 +149,7 @@
               <li class="icon-list-item card-desc"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Curriculum-aligned cybersecurity concepts</li>
               <li class="icon-list-item card-desc"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Available as an incursion or excursion activity</li>
             </ul>
-            <p style="font-style:italic;color:var(--hudstack-teal);font-size:.9rem;margin:0">"The most fun your students will have learning about cybersecurity"</p>
+            <p style="font-style:italic;color:var(--hs-teal);font-size:.9rem;margin:0">"The most fun your students will have learning about cybersecurity"</p>
           </div>
 
         </div>
@@ -155,29 +160,29 @@
     <section class="section section-light" aria-labelledby="delivery-heading">
       <div class="container">
         <div class="text-center fade-in">
-          <span class="section-label" style="color:var(--hudstack-teal)">Delivery options</span>
-          <h2 id="delivery-heading" style="color:var(--hudstack-dark-text)">How We Deliver</h2>
+          <span class="section-label" style="color:var(--hs-teal)">Delivery options</span>
+          <h2 id="delivery-heading" style="color:var(--hs-dark-text)">How We Deliver</h2>
           <div class="accent-line centered" aria-hidden="true"></div>
         </div>
         <ul class="icon-list stagger" style="margin-top:3rem;max-width:640px;margin-inline:auto" aria-label="Delivery formats">
-          <li class="icon-list-item" style="color:var(--hudstack-dark-text)">
+          <li class="icon-list-item" style="color:var(--hs-dark-text)">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
             School incursions (we come to your school)
           </li>
-          <li class="icon-list-item" style="color:var(--hudstack-dark-text)">
+          <li class="icon-list-item" style="color:var(--hs-dark-text)">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
             After-school programs
           </li>
-          <li class="icon-list-item" style="color:var(--hudstack-dark-text)">
+          <li class="icon-list-item" style="color:var(--hs-dark-text)">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
             Holiday workshop programs
           </li>
-          <li class="icon-list-item" style="color:var(--hudstack-dark-text)">
+          <li class="icon-list-item" style="color:var(--hs-dark-text)">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
             Youth group sessions (scouts, cadets, church groups, community organisations)
           </li>
         </ul>
-        <p class="fade-in" style="margin-top:2rem;max-width:640px;margin-inline:auto;font-style:italic;color:var(--hudstack-dark-text);opacity:.75;text-align:center">
+        <p class="fade-in" style="margin-top:2rem;max-width:640px;margin-inline:auto;font-style:italic;color:var(--hs-dark-text);opacity:.75;text-align:center">
           All programs can be adapted to your curriculum requirements and year level.
         </p>
       </div>
@@ -239,6 +244,10 @@
           <a href="/privacy.html">Privacy Policy</a>
           <a href="/terms.html">Terms of Use</a>
         </div>
+      <div class="data-flow" aria-hidden="true">
+        <span class="data-label">DATA FLOW:</span>
+        <div class="data-line"><div class="data-pulse"></div></div>
+      </div>
       </div>
     </div>
   </footer>

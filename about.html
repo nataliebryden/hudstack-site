@@ -9,16 +9,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>
 <body>
 
   <!-- NAV -->
+  <div class="status-bar" aria-hidden="true">
+    <span class="status-left">SYSTEM STATUS: OPTIMAL</span>
+    <span class="status-right">UPTIME: 99.9%</span>
+  </div>
   <header>
     <nav class="nav" role="navigation" aria-label="Main navigation">
       <div class="nav-inner">
         <a href="/index.html" class="nav-logo" aria-label="HudStack home">
-          <span class="nav-logo-name">HudStack</span>
-          <span class="nav-logo-tag">Security is human.</span>
+          <img src="/img/hudstack-logo.svg" alt="" class="nav-logo-icon" aria-hidden="true">
+          <span class="nav-logo-text">HUDSTACK</span>
         </a>
         <ul class="nav-links" role="list">
           <li><a href="/about.html" class="nav-link">About</a></li>
@@ -108,8 +113,8 @@
     <section class="section section-light" aria-labelledby="values-heading">
       <div class="container">
         <div class="text-center fade-in">
-          <span class="section-label" style="color:var(--hudstack-teal)">What we stand for</span>
-          <h2 id="values-heading" style="color:var(--hudstack-dark-text)">Our Values</h2>
+          <span class="section-label" style="color:var(--hs-teal)">What we stand for</span>
+          <h2 id="values-heading" style="color:var(--hs-dark-text)">Our Values</h2>
           <div class="accent-line centered" aria-hidden="true"></div>
         </div>
         <div class="grid grid-3 stagger" style="margin-top:3rem">
@@ -120,8 +125,8 @@
                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
               </svg>
             </div>
-            <h3 style="color:var(--hudstack-dark-text);margin-bottom:.5rem">Human First</h3>
-            <p style="color:var(--hudstack-dark-text);opacity:.75;margin:0">We teach people, not just policies.</p>
+            <h3 style="color:var(--hs-dark-text);margin-bottom:.5rem">Human First</h3>
+            <p style="color:var(--hs-dark-text);opacity:.75;margin:0">We teach people, not just policies.</p>
           </div>
 
           <div class="card-light">
@@ -131,8 +136,8 @@
                 <polyline points="17 6 23 6 23 12"/>
               </svg>
             </div>
-            <h3 style="color:var(--hudstack-dark-text);margin-bottom:.5rem">Measurable Impact</h3>
-            <p style="color:var(--hudstack-dark-text);opacity:.75;margin:0">We show real results and track improvement over time.</p>
+            <h3 style="color:var(--hs-dark-text);margin-bottom:.5rem">Measurable Impact</h3>
+            <p style="color:var(--hs-dark-text);opacity:.75;margin:0">We show real results and track improvement over time.</p>
           </div>
 
           <div class="card-light">
@@ -143,8 +148,8 @@
                 <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
               </svg>
             </div>
-            <h3 style="color:var(--hudstack-dark-text);margin-bottom:.5rem">Accessible to Everyone</h3>
-            <p style="color:var(--hudstack-dark-text);opacity:.75;margin:0">Cybersecurity education should reach everyone, because human behaviour is the strongest defence.</p>
+            <h3 style="color:var(--hs-dark-text);margin-bottom:.5rem">Accessible to Everyone</h3>
+            <p style="color:var(--hs-dark-text);opacity:.75;margin:0">Cybersecurity education should reach everyone, because human behaviour is the strongest defence.</p>
           </div>
 
         </div>
@@ -207,6 +212,10 @@
           <a href="/privacy.html">Privacy Policy</a>
           <a href="/terms.html">Terms of Use</a>
         </div>
+      <div class="data-flow" aria-hidden="true">
+        <span class="data-label">DATA FLOW:</span>
+        <div class="data-line"><div class="data-pulse"></div></div>
+      </div>
       </div>
     </div>
   </footer>

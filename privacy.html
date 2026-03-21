@@ -9,16 +9,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>
 <body>
 
   <!-- NAV -->
+  <div class="status-bar" aria-hidden="true">
+    <span class="status-left">SYSTEM STATUS: OPTIMAL</span>
+    <span class="status-right">UPTIME: 99.9%</span>
+  </div>
   <header>
     <nav class="nav" role="navigation" aria-label="Main navigation">
       <div class="nav-inner">
         <a href="/index.html" class="nav-logo" aria-label="HudStack home">
-          <span class="nav-logo-name">HudStack</span>
-          <span class="nav-logo-tag">Security is human.</span>
+          <img src="/img/hudstack-logo.svg" alt="" class="nav-logo-icon" aria-hidden="true">
+          <span class="nav-logo-text">HUDSTACK</span>
         </a>
         <ul class="nav-links" role="list">
           <li><a href="/about.html" class="nav-link">About</a></li>
@@ -189,6 +194,10 @@
           <a href="/privacy.html">Privacy Policy</a>
           <a href="/terms.html">Terms of Use</a>
         </div>
+      <div class="data-flow" aria-hidden="true">
+        <span class="data-label">DATA FLOW:</span>
+        <div class="data-line"><div class="data-pulse"></div></div>
+      </div>
       </div>
     </div>
   </footer>

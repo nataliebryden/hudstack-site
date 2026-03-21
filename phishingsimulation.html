@@ -9,16 +9,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>
 <body>
 
   <!-- NAV -->
+  <div class="status-bar" aria-hidden="true">
+    <span class="status-left">SYSTEM STATUS: OPTIMAL</span>
+    <span class="status-right">UPTIME: 99.9%</span>
+  </div>
   <header>
     <nav class="nav" role="navigation" aria-label="Main navigation">
       <div class="nav-inner">
         <a href="/index.html" class="nav-logo" aria-label="HudStack home">
-          <span class="nav-logo-name">HudStack</span>
-          <span class="nav-logo-tag">Security is human.</span>
+          <img src="/img/hudstack-logo.svg" alt="" class="nav-logo-icon" aria-hidden="true">
+          <span class="nav-logo-text">HUDSTACK</span>
         </a>
         <ul class="nav-links" role="list">
           <li><a href="/about.html" class="nav-link">About</a></li>
@@ -92,7 +97,7 @@
           <span class="section-label">What it is</span>
           <h2 id="what-heading">Real simulations. Real insights. No real harm.</h2>
           <div class="accent-line" aria-hidden="true"></div>
-          <p style="font-size:1.1rem;color:var(--hudstack-white)">
+          <p style="font-size:1.1rem;color:var(--hs-white)">
             We send realistic but harmless simulated phishing emails to your team and measure how they respond.
           </p>
           <p>
@@ -139,32 +144,32 @@
     <section class="section section-light" aria-labelledby="get-heading">
       <div class="container">
         <div class="text-center fade-in">
-          <span class="section-label" style="color:var(--hudstack-teal)">Deliverables</span>
-          <h2 id="get-heading" style="color:var(--hudstack-dark-text)">What You Get</h2>
+          <span class="section-label" style="color:var(--hs-teal)">Deliverables</span>
+          <h2 id="get-heading" style="color:var(--hs-dark-text)">What You Get</h2>
           <div class="accent-line centered" aria-hidden="true"></div>
         </div>
         <ul class="icon-list stagger" style="margin-top:3rem;max-width:680px;margin-inline:auto" aria-label="Deliverables included">
-          <li class="icon-list-item" style="color:var(--hudstack-dark-text)">
+          <li class="icon-list-item" style="color:var(--hs-dark-text)">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
             Branded dashboard with real-time results
           </li>
-          <li class="icon-list-item" style="color:var(--hudstack-dark-text)">
+          <li class="icon-list-item" style="color:var(--hs-dark-text)">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
             Team performance breakdown by department or group
           </li>
-          <li class="icon-list-item" style="color:var(--hudstack-dark-text)">
+          <li class="icon-list-item" style="color:var(--hs-dark-text)">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
             Individual awareness scoring (kept confidential)
           </li>
-          <li class="icon-list-item" style="color:var(--hudstack-dark-text)">
+          <li class="icon-list-item" style="color:var(--hs-dark-text)">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
             Detailed PDF report for leadership
           </li>
-          <li class="icon-list-item" style="color:var(--hudstack-dark-text)">
+          <li class="icon-list-item" style="color:var(--hs-dark-text)">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
             Recommendations for targeted training
           </li>
-          <li class="icon-list-item" style="color:var(--hudstack-dark-text)">
+          <li class="icon-list-item" style="color:var(--hs-dark-text)">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
             Before-and-after comparison when you re-test
           </li>
@@ -179,7 +184,7 @@
           <span class="section-label">The case for simulation</span>
           <h2 id="why-heading">Why It Matters</h2>
           <div class="accent-line" aria-hidden="true"></div>
-          <p style="font-size:1.1rem;color:var(--hudstack-white)">
+          <p style="font-size:1.1rem;color:var(--hs-white)">
             Over 90% of cyberattacks begin with a phishing email.
           </p>
           <p>
@@ -248,6 +253,10 @@
           <a href="/privacy.html">Privacy Policy</a>
           <a href="/terms.html">Terms of Use</a>
         </div>
+      <div class="data-flow" aria-hidden="true">
+        <span class="data-label">DATA FLOW:</span>
+        <div class="data-line"><div class="data-pulse"></div></div>
+      </div>
       </div>
     </div>
   </footer>

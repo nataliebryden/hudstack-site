@@ -9,16 +9,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>
 <body>
 
   <!-- ===================== NAV ===================== -->
+  <div class="status-bar" aria-hidden="true">
+    <span class="status-left">SYSTEM STATUS: OPTIMAL</span>
+    <span class="status-right">UPTIME: 99.9%</span>
+  </div>
   <header>
     <nav class="nav" role="navigation" aria-label="Main navigation">
       <div class="nav-inner">
         <a href="/index.html" class="nav-logo" aria-label="HudStack home">
-          <span class="nav-logo-name">HudStack</span>
-          <span class="nav-logo-tag">Security is human.</span>
+          <img src="/img/hudstack-logo.svg" alt="" class="nav-logo-icon" aria-hidden="true">
+          <span class="nav-logo-text">HUDSTACK</span>
         </a>
 
         <ul class="nav-links" role="list">
@@ -79,7 +84,7 @@
       <div class="hero-glow" aria-hidden="true"></div>
       <div class="container hero-inner">
         <span class="section-label fade-in">Cybersecurity education</span>
-        <h1 class="fade-in gradient-text" style="transition-delay:80ms">Security is human.</h1>
+        <h1 class="fade-in" style="transition-delay:80ms"><span class="typewriter-target"></span><span class="typewriter-cursor" aria-hidden="true"></span></h1>
         <div class="accent-line fade-in" style="transition-delay:120ms" aria-hidden="true"></div>
         <p class="hero-sub fade-in" style="transition-delay:160ms">
           Engaging cybersecurity education, training, and phishing simulations for businesses, schools, and communities.
@@ -187,9 +192,9 @@
     <section class="section section-light" aria-labelledby="how-heading">
       <div class="container">
         <div class="text-center fade-in">
-          <span class="section-label" style="color:var(--hudstack-teal)">Our approach</span>
-          <h2 id="how-heading" class="section-heading" style="color:var(--hudstack-dark-text)">How We Work With You</h2>
-          <p class="section-sub centered" style="color:var(--hudstack-dark-text);opacity:.75">
+          <span class="section-label" style="color:var(--hs-teal)">Our approach</span>
+          <h2 id="how-heading" class="section-heading" style="color:var(--hs-dark-text)">How We Work With You</h2>
+          <p class="section-sub centered" style="color:var(--hs-dark-text);opacity:.75">
             Three simple steps from first conversation to measurable improvement.
           </p>
         </div>
@@ -304,6 +309,10 @@
           <a href="/privacy.html">Privacy Policy</a>
           <a href="/terms.html">Terms of Use</a>
         </div>
+      <div class="data-flow" aria-hidden="true">
+        <span class="data-label">DATA FLOW:</span>
+        <div class="data-line"><div class="data-pulse"></div></div>
+      </div>
       </div>
     </div>
   </footer>

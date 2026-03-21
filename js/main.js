@@ -105,28 +105,22 @@
   });
 
   /* ----------------------------------------------------------
-     6. TYPEWRITER: homepage hero h1
+     6. TYPEWRITER: homepage hero h1 (character-by-character)
      ---------------------------------------------------------- */
-  const typewriterEl = document.querySelector('.hero .typewriter');
-  if (typewriterEl) {
-    const fullText = typewriterEl.textContent.trim();
-    typewriterEl.textContent = '';
-    typewriterEl.classList.add('typing');
-
+  const typeTarget = document.querySelector('.hero h1 .typewriter-target');
+  const typeCursor = document.querySelector('.hero h1 .typewriter-cursor');
+  if (typeTarget) {
+    const text = 'SECURITY IS HUMAN.';
     let i = 0;
-    const speed = 55;
-
     function type() {
-      if (i < fullText.length) {
-        typewriterEl.textContent += fullText.charAt(i);
-        i++;
-        setTimeout(type, speed);
+      if (i < text.length) {
+        typeTarget.textContent += text.charAt(i++);
+        setTimeout(type, 55);
       } else {
-        typewriterEl.classList.remove('typing');
+        // Hide cursor after short pause
+        setTimeout(() => { if (typeCursor) typeCursor.style.display = 'none'; }, 1800);
       }
     }
-
-    // Small delay so the page settles before typing starts
     setTimeout(type, 600);
   }
 

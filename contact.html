@@ -9,16 +9,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>
 <body>
 
   <!-- NAV -->
+  <div class="status-bar" aria-hidden="true">
+    <span class="status-left">SYSTEM STATUS: OPTIMAL</span>
+    <span class="status-right">UPTIME: 99.9%</span>
+  </div>
   <header>
     <nav class="nav" role="navigation" aria-label="Main navigation">
       <div class="nav-inner">
         <a href="/index.html" class="nav-logo" aria-label="HudStack home">
-          <span class="nav-logo-name">HudStack</span>
-          <span class="nav-logo-tag">Security is human.</span>
+          <img src="/img/hudstack-logo.svg" alt="" class="nav-logo-icon" aria-hidden="true">
+          <span class="nav-logo-text">HUDSTACK</span>
         </a>
         <ul class="nav-links" role="list">
           <li><a href="/about.html" class="nav-link">About</a></li>
@@ -159,18 +164,18 @@
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
               </svg>
               <div>
-                <div style="font-size:.85rem;color:var(--hudstack-gray);margin-bottom:.25rem">Email</div>
+                <div style="font-size:.85rem;color:var(--hs-gray);margin-bottom:.25rem">Email</div>
                 <a href="mailto:info@hudstack.com">info@hudstack.com</a>
               </div>
             </div>
 
             <div style="margin-top:2rem;padding:1.5rem;background:rgba(46,196,182,.05);border:1px solid rgba(46,196,182,.1);border-radius:1rem">
-              <p style="color:var(--hudstack-white);font-weight:600;margin-bottom:.5rem">Prefer to chat?</p>
+              <p style="color:var(--hs-white);font-weight:600;margin-bottom:.5rem">Prefer to chat?</p>
               <p style="margin:0;font-size:.95rem">Send us an email and we'll arrange a call at a time that suits you.</p>
             </div>
 
             <div style="margin-top:2rem">
-              <h3 style="font-size:1rem;margin-bottom:1rem;color:var(--hudstack-white)">Our Programs</h3>
+              <h3 style="font-size:1rem;margin-bottom:1rem;color:var(--hs-white)">Our Programs</h3>
               <div style="display:flex;flex-direction:column;gap:.5rem">
                 <a href="/cyberawarenesstraining.html" class="card-link" style="margin-top:0">Cybersecurity Awareness Training</a>
                 <a href="/phishingsimulation.html" class="card-link" style="margin-top:0">Phishing Simulations</a>
@@ -232,6 +237,10 @@
           <a href="/privacy.html">Privacy Policy</a>
           <a href="/terms.html">Terms of Use</a>
         </div>
+      <div class="data-flow" aria-hidden="true">
+        <span class="data-label">DATA FLOW:</span>
+        <div class="data-line"><div class="data-pulse"></div></div>
+      </div>
       </div>
     </div>
   </footer>

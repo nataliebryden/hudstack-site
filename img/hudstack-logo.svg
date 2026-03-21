@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2EC4B6"/>
+      <stop offset="100%" stop-color="#FF3CAC"/>
+    </linearGradient>
+  </defs>
+  <!-- Outer shield -->
+  <path d="M32 4 L56 15 V36 C56 48 44 58 32 61 C20 58 8 48 8 36 V15 Z"
+        stroke="url(#g)" stroke-width="2" fill="rgba(46,196,182,0.04)"/>
+  <!-- Inner shield accent -->
+  <path d="M32 11 L50 20 V36 C50 45 41 53 32 56 C23 53 14 45 14 36 V20 Z"
+        stroke="url(#g)" stroke-width="0.6" fill="none" opacity="0.35"/>
+  <!-- H letterform (lines, no font dependency) -->
+  <line x1="22" y1="22" x2="22" y2="44" stroke="#F0F4F8" stroke-width="4" stroke-linecap="round"/>
+  <line x1="42" y1="22" x2="42" y2="44" stroke="#F0F4F8" stroke-width="4" stroke-linecap="round"/>
+  <line x1="22" y1="33" x2="42" y2="33" stroke="#F0F4F8" stroke-width="4" stroke-linecap="round"/>
+</svg>

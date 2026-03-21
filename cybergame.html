@@ -9,16 +9,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>
 <body>
 
   <!-- NAV -->
+  <div class="status-bar" aria-hidden="true">
+    <span class="status-left">SYSTEM STATUS: OPTIMAL</span>
+    <span class="status-right">UPTIME: 99.9%</span>
+  </div>
   <header>
     <nav class="nav" role="navigation" aria-label="Main navigation">
       <div class="nav-inner">
         <a href="/index.html" class="nav-logo" aria-label="HudStack home">
-          <span class="nav-logo-name">HudStack</span>
-          <span class="nav-logo-tag">Security is human.</span>
+          <img src="/img/hudstack-logo.svg" alt="" class="nav-logo-icon" aria-hidden="true">
+          <span class="nav-logo-text">HUDSTACK</span>
         </a>
         <ul class="nav-links" role="list">
           <li><a href="/about.html" class="nav-link">About</a></li>
@@ -93,7 +98,7 @@
           <p>
             Players face realistic cyber scenarios including phishing attempts, social engineering, data breaches, and password challenges. Make decisions, face consequences, and learn from mistakes in a safe, engaging environment.
           </p>
-          <p style="font-style:italic;color:var(--hudstack-teal)">
+          <p style="font-style:italic;color:var(--hs-teal)">
             "No technical knowledge required. Just sharp thinking and healthy suspicion."
           </p>
         </div>
@@ -150,8 +155,8 @@
     <section class="section section-light" aria-labelledby="formats-heading">
       <div class="container">
         <div class="text-center fade-in">
-          <span class="section-label" style="color:var(--hudstack-teal)">Formats</span>
-          <h2 id="formats-heading" style="color:var(--hudstack-dark-text)">Available Formats</h2>
+          <span class="section-label" style="color:var(--hs-teal)">Formats</span>
+          <h2 id="formats-heading" style="color:var(--hs-dark-text)">Available Formats</h2>
           <div class="accent-line centered" aria-hidden="true"></div>
         </div>
         <div class="grid grid-2 stagger" style="margin-top:3rem;max-width:720px;margin-inline:auto">
@@ -162,8 +167,8 @@
                 <path d="M16 2v4M8 2v4M2 10h20M8 16h.01M12 16h.01M16 16h.01M8 20h.01M12 20h.01M16 20h.01"/>
               </svg>
             </div>
-            <h3 style="color:var(--hudstack-dark-text);font-size:1.1rem;margin-bottom:.5rem">Strategy Game</h3>
-            <p style="color:var(--hudstack-dark-text);opacity:.75;margin:0">A full group experience for 3-6 players. Corporate training, classroom use, or game night.</p>
+            <h3 style="color:var(--hs-dark-text);font-size:1.1rem;margin-bottom:.5rem">Strategy Game</h3>
+            <p style="color:var(--hs-dark-text);opacity:.75;margin:0">A full group experience for 3-6 players. Corporate training, classroom use, or game night.</p>
           </div>
           <div class="card-light">
             <div class="card-icon" aria-hidden="true">
@@ -171,8 +176,8 @@
                 <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
               </svg>
             </div>
-            <h3 style="color:var(--hudstack-dark-text);font-size:1.1rem;margin-bottom:.5rem">Card Deck</h3>
-            <p style="color:var(--hudstack-dark-text);opacity:.75;margin:0">A portable, fast-paced card game for quick cybersecurity challenges. Great for icebreakers, workshops, and events.</p>
+            <h3 style="color:var(--hs-dark-text);font-size:1.1rem;margin-bottom:.5rem">Card Deck</h3>
+            <p style="color:var(--hs-dark-text);opacity:.75;margin:0">A portable, fast-paced card game for quick cybersecurity challenges. Great for icebreakers, workshops, and events.</p>
           </div>
         </div>
       </div>
@@ -234,6 +239,10 @@
           <a href="/privacy.html">Privacy Policy</a>
           <a href="/terms.html">Terms of Use</a>
         </div>
+      <div class="data-flow" aria-hidden="true">
+        <span class="data-label">DATA FLOW:</span>
+        <div class="data-line"><div class="data-pulse"></div></div>
+      </div>
       </div>
     </div>
   </footer>
