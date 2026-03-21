@@ -14,25 +14,30 @@
   }, { passive: true });
 
   /* ----------------------------------------------------------
-     5. TYPEWRITER: force width:0, then trigger via .typing class
+     5. TYPEWRITER: pure JS, one character at a time
      ---------------------------------------------------------- */
-  const wrapper = document.querySelector('.typewriter-wrapper');
-  if (wrapper) {
-    const chars = wrapper.textContent.trim().length;
-    const duration = chars < 20 ? 2 : chars < 35 ? 2.5 : 3;
-    wrapper.style.setProperty('--type-steps', chars);
-    wrapper.style.setProperty('--type-duration', duration + 's');
-    wrapper.style.width = '0';
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        wrapper.classList.add('typing');
-      });
-    });
+  const heading = document.getElementById('hero-heading');
+  if (heading) {
+    const fullText = heading.getAttribute('data-text');
+    if (fullText) {
+      heading.innerHTML = '<span class="hero-cursor">|</span>';
+      let i = 0;
+      const speed = fullText.length < 20 ? 100 : fullText.length < 35 ? 80 : 60;
+      function typeChar() {
+        if (i < fullText.length) {
+          heading.innerHTML = fullText.substring(0, i + 1) + '<span class="hero-cursor">|</span>';
+          i++;
+          setTimeout(typeChar, speed);
+        } else {
+          setTimeout(() => {
+            const cursor = heading.querySelector('.hero-cursor');
+            if (cursor) cursor.remove();
+          }, 1500);
+        }
+      }
+      setTimeout(typeChar, 600);
+    }
   }
-
-  setTimeout(() => {
-    document.querySelectorAll('.typewriter-cursor').forEach(c => { c.style.display = 'none'; });
-  }, 4500);
 
   /* ----------------------------------------------------------
      7. SCROLL ANIMATIONS: Intersection Observer

@@ -78,7 +78,7 @@ p:last-child { margin-bottom: 0; }
   background-clip: text;
 }
 
-/* Typewriter — homepage hero */
+/* Hero headline — JS typewriter */
 .hero-headline {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
@@ -87,37 +87,19 @@ p:last-child { margin-bottom: 0; }
   letter-spacing: -0.03em;
   text-transform: uppercase;
   text-align: center;
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-}
-.typewriter-wrapper {
-  display: inline-block;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  width: 0 !important;
+  min-height: 1.2em;
   background: linear-gradient(135deg, #2EC4B6, #7C3AED, #FF3CAC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-.typewriter-wrapper.typing {
-  animation: type-reveal var(--type-duration, 2s) steps(var(--type-steps, 19), end) 0.5s forwards;
+.hero-cursor {
+  display: inline;
+  color: #2EC4B6;
+  animation: blink 0.7s step-end infinite;
+  -webkit-text-fill-color: #2EC4B6;
 }
-@keyframes type-reveal {
-  from { width: 0 !important; }
-  to   { width: 100% !important; }
-}
-.typewriter-cursor {
-  display: inline-block;
-  width: 3px;
-  height: 0.85em;
-  background: #2EC4B6;
-  margin-left: 4px;
-  flex-shrink: 0;
-  animation: cursor-blink 0.7s step-end infinite;
-}
-@keyframes cursor-blink {
+@keyframes blink {
   50% { opacity: 0; }
 }
 
