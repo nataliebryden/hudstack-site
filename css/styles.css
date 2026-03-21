@@ -120,12 +120,12 @@ p:last-child { margin-bottom: 0; }
 .section { padding-block: var(--space-2xl); }
 section { padding: 7rem 2rem; }
 @media (max-width: 768px) { section { padding: 4rem 1.5rem; } }
-.section-dark  { background-color: rgba(11, 17, 32, 0.75);  }
-.section-slate { background-color: rgba(30, 41, 59, 0.70); }
-.section-navy  { background-color: rgba(27, 42, 74, 0.70);  }
+.section-dark  { background-color: rgba(11, 17, 32, 0.40);  }
+.section-slate { background-color: rgba(30, 41, 59, 0.15); }
+.section-navy  { background-color: rgba(27, 42, 74, 0.20);  }
 
 /* Kill light sections — entire site is dark */
-.section-light { background-color: var(--hs-navy) !important; }
+.section-light { background-color: rgba(27, 42, 74, 0.20) !important; }
 .section-light h1,
 .section-light h2,
 .section-light h3,
@@ -219,7 +219,8 @@ section { padding: 7rem 2rem; }
   padding: var(--space-lg);
   position: relative;
   overflow: hidden;
-  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+  cursor: pointer;
+  transition: transform 400ms cubic-bezier(0.16, 1, 0.3, 1), border-color 400ms ease, box-shadow 400ms ease, background 400ms ease;
 }
 .card-glass::before {
   content: '';
@@ -238,9 +239,15 @@ section { padding: 7rem 2rem; }
   border-right: 1px solid rgba(46, 196, 182, 0.2);
 }
 .card-glass:hover {
-  transform: translateY(-4px);
-  border-color: rgba(46, 196, 182, 0.1);
-  box-shadow: 0 0 30px rgba(46, 196, 182, 0.06), 0 4px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-6px);
+  border-color: rgba(46, 196, 182, 0.15);
+  box-shadow: 0 0 40px rgba(46, 196, 182, 0.08), 0 20px 40px rgba(0, 0, 0, 0.3);
+  background: rgba(27, 42, 74, 0.4);
+}
+.card-glass:hover .card-link,
+.card-glass:hover .learn-more {
+  color: var(--hs-white);
+  text-shadow: 0 0 10px rgba(46, 196, 182, 0.3);
 }
 
 .card-solid {
@@ -713,7 +720,7 @@ nav.scrolled {
   .section-label { font-size: 0.65rem; }
 
   /* Status bar */
-  .status-bar { font-size: 0.55rem; padding: 0.2rem 1rem; }
+  .status-bar { font-size: 0.5rem; padding: 0.2rem 0.75rem; letter-spacing: 0.08em; }
 
   /* Footer */
   .footer { padding: 3rem 1.25rem 2rem; }
@@ -739,7 +746,7 @@ nav.scrolled {
   background: rgba(6, 10, 19, 0.97);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  z-index: 99;
+  z-index: 200;
   padding: 6rem 2rem 2rem;
   overflow-y: auto;
 }
@@ -783,7 +790,7 @@ nav.scrolled {
   padding-bottom: var(--space-2xl);
   position: relative;
   overflow: hidden;
-  background-color: rgba(11, 17, 32, 0.75);
+  background-color: transparent;
   text-align: center;
 }
 .hero h1 {
@@ -839,7 +846,7 @@ nav.scrolled {
   text-align: center;
   padding-top: 8rem;
   padding-bottom: var(--space-xl);
-  background-color: rgba(11, 17, 32, 0.75);
+  background-color: transparent;
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -903,7 +910,7 @@ nav.scrolled {
 
 /* 15. CTA SECTION */
 .cta-section {
-  background: var(--hs-navy);
+  background: rgba(27, 42, 74, 0.20);
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -1044,17 +1051,19 @@ body::before {
 /* Status bar */
 .status-bar {
   width: 100%;
-  padding: 0.3rem 1.5rem;
+  padding: 0.25rem 1.5rem;
   display: flex;
   justify-content: space-between;
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 0.62rem;
+  font-size: 0.65rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--hs-teal);
   opacity: 0.4;
   background: var(--hs-black);
   border-bottom: 1px solid rgba(46,196,182,.06);
+  overflow: hidden;
+  white-space: nowrap;
   position: relative;
   z-index: 101;
 }
