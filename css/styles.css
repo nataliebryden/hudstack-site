@@ -700,7 +700,7 @@ nav.scrolled {
   padding-bottom: var(--space-2xl);
   position: relative;
   overflow: hidden;
-  background-color: var(--hs-dark);
+  background-color: rgba(11, 17, 32, 0.75);
   text-align: center;
 }
 .hero h1 {
@@ -756,7 +756,7 @@ nav.scrolled {
   text-align: center;
   padding-top: 8rem;
   padding-bottom: var(--space-xl);
-  background-color: var(--hs-dark);
+  background-color: rgba(11, 17, 32, 0.75);
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -871,7 +871,7 @@ body::before {
   left: -10%;
   width: 60vw;
   height: 60vw;
-  background: radial-gradient(circle, rgba(46,196,182,0.07) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(46,196,182,0.18) 0%, transparent 70%);
   filter: blur(80px);
   pointer-events: none;
   z-index: 1;
@@ -883,7 +883,7 @@ body::before {
   right: -10%;
   width: 50vw;
   height: 50vw;
-  background: radial-gradient(circle, rgba(255,60,172,0.05) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255,60,172,0.14) 0%, transparent 70%);
   filter: blur(80px);
   pointer-events: none;
   z-index: 1;
