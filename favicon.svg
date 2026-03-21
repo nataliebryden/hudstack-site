@@ -13,7 +13,7 @@
 
   <!-- Shield border (extra thick for small sizes) -->
   <path d="M32 2 L56 16 V42 C56 52 44 62 32 66 C20 62 8 52 8 42 V16 Z"
-        fill="none" stroke="url(#grad)" stroke-width="4"/>
+        fill="none" stroke="url(#grad)" stroke-width="7"/>
 
   <!-- Bold H -->
   <rect x="20" y="21" width="7" height="26" rx="1" fill="#2EC4B6"/>
