@@ -69,6 +69,25 @@
   });
 
   /* ----------------------------------------------------------
+     6. MOBILE MENU: hamburger toggle
+     ---------------------------------------------------------- */
+  const hamburger = document.querySelector('.hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('active');
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        hamburger.classList.remove('active');
+      });
+    });
+  }
+
+  /* ----------------------------------------------------------
      8. SMOOTH SCROLL: anchor links
      ---------------------------------------------------------- */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
