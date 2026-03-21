@@ -1,7 +1,5 @@
 /* ============================================================
    HudStack — main.js
-   Mobile menu, scroll animations, nav scroll effect,
-   contact form handler
    ============================================================ */
 
 (function () {
@@ -13,18 +11,14 @@
   const nav = document.querySelector('.nav');
   if (nav) {
     const onScroll = () => {
-      if (window.scrollY > 20) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
-      }
+      nav.classList.toggle('scrolled', window.scrollY > 20);
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
   }
 
   /* ----------------------------------------------------------
-     2. MOBILE MENU: hamburger toggle
+     2. MOBILE MENU
      ---------------------------------------------------------- */
   const hamburger = document.querySelector('.nav-hamburger');
   const mobileMenu = document.querySelector('.nav-mobile');
@@ -37,7 +31,6 @@
       document.body.style.overflow = isOpen ? 'hidden' : '';
     });
 
-    // Close on link click
     mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         hamburger.classList.remove('open');
@@ -47,7 +40,6 @@
       });
     });
 
-    // Close on Escape
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
         hamburger.classList.remove('open');
@@ -59,7 +51,7 @@
   }
 
   /* ----------------------------------------------------------
-     3. SERVICES DROPDOWN: click for desktop
+     3. SERVICES DROPDOWN
      ---------------------------------------------------------- */
   const dropdowns = document.querySelectorAll('.nav-dropdown');
   dropdowns.forEach(dropdown => {
@@ -73,7 +65,6 @@
     }
   });
 
-  // Close dropdowns when clicking outside
   document.addEventListener('click', () => {
     dropdowns.forEach(d => {
       d.classList.remove('open');
@@ -83,12 +74,69 @@
   });
 
   /* ----------------------------------------------------------
-     4. SCROLL ANIMATIONS: Intersection Observer
+     4. HUD RETICLE: inject into every hero section
+     ---------------------------------------------------------- */
+  const hudSVG = `<div class="hud-element" aria-hidden="true">
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="100" r="80" fill="none" stroke="currentColor" stroke-width="0.5" stroke-dasharray="4 8"/>
+      <circle cx="100" cy="100" r="50" fill="none" stroke="currentColor" stroke-width="0.75"/>
+      <line x1="100" y1="20" x2="100" y2="40" stroke="currentColor" stroke-width="1.5"/>
+      <line x1="100" y1="160" x2="100" y2="180" stroke="currentColor" stroke-width="1.5"/>
+      <line x1="20" y1="100" x2="40" y2="100" stroke="currentColor" stroke-width="1.5"/>
+      <line x1="160" y1="100" x2="180" y2="100" stroke="currentColor" stroke-width="1.5"/>
+      <circle cx="100" cy="100" r="4" fill="currentColor"/>
+      <circle cx="100" cy="100" r="12" fill="none" stroke="currentColor" stroke-width="0.75"/>
+      <line x1="60" y1="60" x2="70" y2="70" stroke="currentColor" stroke-width="0.5"/>
+      <line x1="140" y1="60" x2="130" y2="70" stroke="currentColor" stroke-width="0.5"/>
+      <line x1="60" y1="140" x2="70" y2="130" stroke="currentColor" stroke-width="0.5"/>
+      <line x1="140" y1="140" x2="130" y2="130" stroke="currentColor" stroke-width="0.5"/>
+    </svg>
+  </div>`;
+
+  document.querySelectorAll('.hero, .hero-inner-page').forEach(hero => {
+    hero.insertAdjacentHTML('beforeend', hudSVG);
+  });
+
+  /* ----------------------------------------------------------
+     5. GLITCH TEXT: apply to inner-page hero h1s
+     ---------------------------------------------------------- */
+  document.querySelectorAll('.hero-inner-page h1').forEach(h1 => {
+    h1.classList.add('glitch-text');
+  });
+
+  /* ----------------------------------------------------------
+     6. TYPEWRITER: homepage hero h1
+     ---------------------------------------------------------- */
+  const typewriterEl = document.querySelector('.hero .typewriter');
+  if (typewriterEl) {
+    const fullText = typewriterEl.textContent.trim();
+    typewriterEl.textContent = '';
+    typewriterEl.classList.add('typing');
+
+    let i = 0;
+    const speed = 55;
+
+    function type() {
+      if (i < fullText.length) {
+        typewriterEl.textContent += fullText.charAt(i);
+        i++;
+        setTimeout(type, speed);
+      } else {
+        typewriterEl.classList.remove('typing');
+      }
+    }
+
+    // Small delay so the page settles before typing starts
+    setTimeout(type, 600);
+  }
+
+  /* ----------------------------------------------------------
+     7. SCROLL ANIMATIONS: Intersection Observer
      ---------------------------------------------------------- */
   const observerOptions = {
     root: null,
     rootMargin: '0px 0px -60px 0px',
-    threshold: 0.1,
+    threshold: 0.08,
   };
 
   const observer = new IntersectionObserver((entries) => {
@@ -100,13 +148,19 @@
     });
   }, observerOptions);
 
-  // Observe all fade-in and stagger elements
   document.querySelectorAll('.fade-in, .stagger').forEach(el => {
     observer.observe(el);
   });
 
+  // Assign animate-in to cards so they stagger on scroll
+  document.querySelectorAll('.card-glass, .card-solid').forEach((card, i) => {
+    card.style.transitionDelay = `${(i % 6) * 80}ms`;
+    card.classList.add('fade-in');
+    observer.observe(card);
+  });
+
   /* ----------------------------------------------------------
-     5. SMOOTH SCROLL: anchor links
+     8. SMOOTH SCROLL: anchor links
      ---------------------------------------------------------- */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -115,8 +169,9 @@
       const target = document.querySelector(href);
       if (target) {
         e.preventDefault();
-        const navHeight = parseInt(getComputedStyle(document.documentElement)
-          .getPropertyValue('--nav-height')) || 72;
+        const navHeight = parseInt(
+          getComputedStyle(document.documentElement).getPropertyValue('--nav-height')
+        ) || 72;
         const top = target.getBoundingClientRect().top + window.scrollY - navHeight - 16;
         window.scrollTo({ top, behavior: 'smooth' });
       }
@@ -124,7 +179,7 @@
   });
 
   /* ----------------------------------------------------------
-     6. CONTACT FORM: Web3Forms submission
+     9. CONTACT FORM: Web3Forms submission
      ---------------------------------------------------------- */
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
@@ -135,11 +190,9 @@
     contactForm.addEventListener('submit', async function (e) {
       e.preventDefault();
 
-      // Hide any previous messages
       if (successMsg) successMsg.style.display = 'none';
       if (errorMsg)   errorMsg.style.display   = 'none';
 
-      // Disable button during submission
       if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.textContent = 'Sending...';
@@ -151,14 +204,12 @@
           method: 'POST',
           body: formData,
         });
-
         const data = await response.json();
 
         if (data.success) {
           contactForm.reset();
           if (successMsg) {
             successMsg.style.display = 'block';
-            successMsg.classList.add('success');
           }
         } else {
           throw new Error(data.message || 'Submission failed');
@@ -166,7 +217,6 @@
       } catch (err) {
         if (errorMsg) {
           errorMsg.style.display = 'block';
-          errorMsg.classList.add('error');
         }
       } finally {
         if (submitBtn) {
