@@ -57,15 +57,19 @@
     });
   }, observerOptions);
 
-  document.querySelectorAll('.fade-in, .stagger').forEach(el => {
+  document.querySelectorAll('.fade-in, .stagger, .animate-in').forEach(el => {
     observer.observe(el);
   });
 
-  // Assign animate-in to cards so they stagger on scroll
+  // Assign animate-in to cards, section heading groups, steps, icon list items
   document.querySelectorAll('.card-glass, .card-solid').forEach((card, i) => {
-    card.style.transitionDelay = `${(i % 6) * 80}ms`;
-    card.classList.add('fade-in');
+    card.classList.add('animate-in');
     observer.observe(card);
+  });
+
+  document.querySelectorAll('.how-step, .icon-list li, .format-item').forEach((el, i) => {
+    el.classList.add('animate-in');
+    observer.observe(el);
   });
 
   /* ----------------------------------------------------------
