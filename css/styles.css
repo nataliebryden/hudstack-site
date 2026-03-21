@@ -612,10 +612,10 @@ nav.scrolled {
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 100%;
+  top: calc(100% + 0.75rem);
   left: 50%;
   transform: translateX(-50%);
-  margin-top: 0.75rem;
+  margin-top: 0;
   background: rgba(11, 17, 32, 0.95);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -626,6 +626,15 @@ nav.scrolled {
   z-index: 200;
 }
 .nav-dropdown:hover .dropdown-menu { display: block; }
+/* Invisible bridge fills the gap so hover isn't lost crossing it */
+.dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -0.75rem;
+  left: 0;
+  right: 0;
+  height: 0.75rem;
+}
 .dropdown-menu a {
   display: block;
   padding: 0.5rem 1rem;

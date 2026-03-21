@@ -22,7 +22,7 @@
 
   <!-- Main shield border (thick gradient) -->
   <path d="M32 2 L56 16 V42 C56 52 44 62 32 66 C20 62 8 52 8 42 V16 Z"
-        fill="none" stroke="url(#grad)" stroke-width="6"/>
+        fill="none" stroke="url(#grad)" stroke-width="8"/>
 
   <!-- Inner shield border (thinner, inset) -->
   <path d="M32 8 L50 19 V40 C50 48 41 56 32 59 C23 56 14 48 14 40 V19 Z"
