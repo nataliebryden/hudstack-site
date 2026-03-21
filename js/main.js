@@ -14,19 +14,20 @@
   }, { passive: true });
 
   /* ----------------------------------------------------------
-     5. GLITCH TEXT: apply to inner-page hero h1s
+     5. TYPEWRITER: set animation duration/steps per character count
      ---------------------------------------------------------- */
-  document.querySelectorAll('.hero-inner-page h1').forEach(h1 => {
-    h1.classList.add('glitch-text');
+  document.querySelectorAll('.typewriter-wrapper').forEach(el => {
+    const chars = el.textContent.length;
+    const duration = chars < 20 ? 2 : chars < 35 ? 2.5 : 3;
+    el.style.animation = `type-reveal ${duration}s steps(${chars}, end) 0.5s forwards`;
   });
 
-  /* ----------------------------------------------------------
-     6. TYPEWRITER: CSS-driven reveal, JS hides cursor after
-     ---------------------------------------------------------- */
+  // Hide all cursors after the longest headline finishes
   setTimeout(() => {
-    const cursor = document.querySelector('.typewriter-cursor');
-    if (cursor) cursor.style.display = 'none';
-  }, 3500);
+    document.querySelectorAll('.typewriter-cursor').forEach(cursor => {
+      cursor.style.display = 'none';
+    });
+  }, 4500);
 
   /* ----------------------------------------------------------
      7. SCROLL ANIMATIONS: Intersection Observer
