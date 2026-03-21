@@ -1,21 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 72" fill="none">
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#2EC4B6"/>
       <stop offset="50%" stop-color="#7C3AED"/>
       <stop offset="100%" stop-color="#FF3CAC"/>
     </linearGradient>
   </defs>
 
-  <!-- Main shield — bolder stroke for small sizes -->
-  <path d="M7 2 L25 2 L29 6 L29 19 L16 30 L3 19 L3 6 Z"
-        fill="#0A0F1A"
-        stroke="url(#g)"
-        stroke-width="2.5"
-        stroke-linejoin="miter"/>
+  <!-- Shield fill -->
+  <path d="M32 2 L56 16 V42 C56 52 44 62 32 66 C20 62 8 52 8 42 V16 Z"
+        fill="#0A0E1A"/>
 
-  <!-- H letterform -->
-  <rect x="8.5" y="9" width="4" height="13" rx="0.5" fill="#2EC4B6"/>
-  <rect x="19.5" y="9" width="4" height="13" rx="0.5" fill="#2EC4B6"/>
-  <rect x="8.5" y="14" width="15" height="3.5" rx="0.5" fill="#2EC4B6"/>
+  <!-- Shield border (extra thick for small sizes) -->
+  <path d="M32 2 L56 16 V42 C56 52 44 62 32 66 C20 62 8 52 8 42 V16 Z"
+        fill="none" stroke="url(#grad)" stroke-width="4"/>
+
+  <!-- Bold H -->
+  <rect x="20" y="21" width="7" height="26" rx="1" fill="#2EC4B6"/>
+  <rect x="37" y="21" width="7" height="26" rx="1" fill="#2EC4B6"/>
+  <rect x="20" y="30" width="24" height="7" rx="1" fill="#2EC4B6"/>
 </svg>
