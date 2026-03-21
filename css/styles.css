@@ -789,7 +789,12 @@ nav.scrolled {
 .footer {
   background-color: var(--hs-dark);
   border-top: 1px solid rgba(46,196,182,.08);
-  padding-block: var(--space-xl);
+  padding: var(--space-xl) 5%;
+}
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-inline: 0;
 }
 .footer-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-xl); margin-bottom: var(--space-xl); }
 @media (min-width: 560px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
