@@ -83,24 +83,12 @@
   });
 
   /* ----------------------------------------------------------
-     6. TYPEWRITER: homepage hero h1 (character-by-character)
+     6. TYPEWRITER: CSS-driven reveal, JS hides cursor after
      ---------------------------------------------------------- */
-  const typeTarget = document.querySelector('.hero h1 .typewriter-target');
-  const typeCursor = document.querySelector('.hero h1 .typewriter-cursor');
-  if (typeTarget) {
-    const text = 'SECURITY IS HUMAN.';
-    let i = 0;
-    function type() {
-      if (i < text.length) {
-        typeTarget.textContent += text.charAt(i++);
-        setTimeout(type, 55);
-      } else {
-        // Hide cursor after short pause
-        setTimeout(() => { if (typeCursor) typeCursor.style.display = 'none'; }, 1800);
-      }
-    }
-    setTimeout(type, 600);
-  }
+  setTimeout(() => {
+    const cursor = document.querySelector('.typewriter-cursor');
+    if (cursor) cursor.style.display = 'none';
+  }, 3500);
 
   /* ----------------------------------------------------------
      7. SCROLL ANIMATIONS: Intersection Observer
