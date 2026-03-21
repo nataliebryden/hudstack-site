@@ -28,7 +28,7 @@
   --space-2xl: 5rem;
 
   --container-max: 1200px;
-  --container-pad: 1.25rem;
+  --container-pad: clamp(1.5rem, 5vw, 3rem);
   --transition:    300ms ease;
   --radius-sm:     0.5rem;
   --radius-md:     1rem;
