@@ -710,7 +710,8 @@ nav.scrolled {
   .grid, .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr !important; gap: 1rem; }
 
   /* Hero */
-  .hero { padding-top: 6rem; min-height: 80vh; }
+  .hero { min-height: auto; height: auto; padding-top: 6rem; padding-bottom: 4rem; }
+  .hero-content { padding-top: 2rem; }
   .hero-headline { font-size: clamp(2rem, 8vw, 3rem); }
   .hero-sub { font-size: 1rem; padding: 0 0.5rem; }
 
